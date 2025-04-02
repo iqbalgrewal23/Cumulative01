@@ -6,9 +6,7 @@ using MySql.Data.MySqlClient;
 
 namespace Cumulative01.Controllers
 {
-    /// <summary>
-    /// API Controller for managing teacher data.
-    /// </summary>
+ 
     [Route("api/[controller]")]
     [ApiController]
     public class TeacherAPIController : ControllerBase
