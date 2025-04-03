@@ -39,6 +39,9 @@ namespace Cumulative01.Controllers
             Command.CommandText = Query;
             MySqlDataReader DataReader = Command.ExecuteReader();
 
+            
+            
+            
             while (DataReader.Read())
             {
                 int TeacherId = Convert.ToInt32(DataReader["teacherid"]);
@@ -48,6 +51,8 @@ namespace Cumulative01.Controllers
                 DateTime HireDate = Convert.ToDateTime(DataReader["hiredate"]);
                 double Salary = Convert.ToDouble(DataReader["salary"]);
 
+               
+                
                 Teacher teacher = new Teacher
                 {
                     TeacherId = TeacherId,
@@ -56,9 +61,13 @@ namespace Cumulative01.Controllers
                     EmployeeID = EmployeeID,
                     HireDate = HireDate,
                     Salary = Salary
+              
+                
                 };
 
                 teachers.Add(teacher);
+          
+            
             }
             Connection.Close();
             return teachers;
